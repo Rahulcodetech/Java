@@ -1,0 +1,36 @@
+		//Primitive variable 
+
+		byte a=10;
+		short b=20;
+		int d=30;
+		long c=40;
+		float e=45.5f;
+		double f=45.55;
+		boolean g=false;
+		char h='x';
+		
+		//Arithmetic Operator 
+		//Comparative Operator
+		//Logical Operator 
+		
+		System.out.println(a+b);
+		System.out.println(a-b);
+		System.out.println(a*b);
+		System.out.println(a/b);
+		System.out.println(a%b);
+		System.out.println(a++);
+		System.out.println(a--);
+		
+		System.out.println(a>b);
+		System.out.println(a<b);
+		System.out.println(a==b);
+		System.out.println(a!=b);
+		
+		System.out.println((a>b)&&(a<b));
+		System.out.println((a>b)|(a>b));
+		System.out.println((a!=b));
+		
+		//Casting 
+		byte i=20;
+		short k=i;
+		System.out.println(k);
