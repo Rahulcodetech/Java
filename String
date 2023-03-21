@@ -1,0 +1,40 @@
+String 
+		
+		  String x="Rahul Pawar";
+		
+		1->String is non primitive data type beacuse size is not fix
+		2->String is sequence(array) of characters
+		3->String is a class and is Syntax "Public final class String extend Object class"
+		4-> Three class in String 
+        String , Buffer and Bulider
+		    *What is string Constant pool /String Literal Pool*
+         Whenever you create a string object using string literal, that object is stored in the string constant pool and whenever you create a string object using //          new keyword, such object is stored in the heap memory.
+		    Special Memory location 
+		    Method
+		    Heap  -> String Constant Pool (SCP)
+		    Stack flow
+		    PC registor 
+		    Native memory 
+		New key word creat the new Object creat 
+		Memoery allocation done in Heap Area
+		String s1=new String("Deepak"); //With new key word Two memory address created
+		String s2="Rahul";		//One Memory address created
+
+		
+		String 
+		String is object contains charter special , charter and numbers. String is immutable , String is slow and consume the memory 
+		
+		String 						Buffer				Builder
+		immutable 					mutable				mutable	
+		StringConstantpool/heap		heap				heap
+		Non synchronized 			synchronized		Non Synchronized
+		Not thread safe 			thread safe			Not thread safe
+		slow						fast than string 	faster than buffer
+		high memory if change the 	low Memory 			Low Memory 
+		string
+		
+		four ways to write the String
+	 	String s1="Hello";
+		String s2=new String("Hello");
+		StringBuffer s3=new String("Hello");
+		StringBuilder s4=new String("Hello");
