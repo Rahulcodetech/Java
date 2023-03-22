@@ -1,0 +1,14 @@
+//Wrap class Concept 
+		 String a="200";
+		 System.out.println(a);
+		 
+		 int i = Integer.parseInt(a);
+		 System.out.println(i);
+		 System.out.println(i+300);
+		 
+		String x="abcd123";
+		char[] xyz=x.toCharArray();
+		
+		for(char j:xyz){
+			System.out.print(j);
+		}
