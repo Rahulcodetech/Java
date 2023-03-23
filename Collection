@@ -1,24 +1,68 @@
 //Collection Array 
 //Static Array/Fix Size Array 
 //Array 
-	  int digit[] =new int[4];
+	 	int digit[] =new int[4];  //Static Array 
 		digit[0]=10;
 		digit[1]=20;
+		
+		//Static Array
+				
+				int[] it=new int[4];
+				it[0]=10;
+				it[1]=20;
+				it[2]=30;
+				it[3]=40;
+		
+				System.out.println(it);
+				
+				System.out.println(it[2]);
+				
+				for(int j=0; j<it.length; j++)
+				{
+					System.out.println(it[j]);
+				}
+				
+				for(Integer s:it)
+				{
+				 System.out.println(s);	
+				}
+				
+				
+				String[] str=new String[2];
+				str[0]="Java1";
+				str[1]="SQL1";
+				
+				for(int z=0; z<str.length; z++)
+				{
+					System.out.println(str[z]);
+				}
+				
+				for(Object n:str)
+				{
+					System.out.println(n);
+				}
+				
+				for(String pn:str)
+				{
+					System.out.println(pn);
+				}
 		
 		System.out.println(digit[1]);
 		
 		//---------------------------
 		
 		char chr[]=new char[4];
-    
-    ArrayList arr=new ArrayList();
+ //-----------------------------------------------------------------------------------------------------------------------------------------   
+ 
+ 		//List
+    		ArrayList arr=new ArrayList();  //Dynamic Object Array Array 
 		arr.add(0);
 		arr.add(1);
 		arr.add("java");
 		arr.add("SQL");
 		System.out.println(arr.get(2));
 		
-		ArrayList<String> ar1=new ArrayList<String>();
+		ArrayList<String> ar1=new ArrayList<String>();  //
 		ar1.add("Java");
 		ar1.add("SQL");
 		System.out.println(ar1.get(1)+" String Array");
@@ -26,7 +70,7 @@
 		
 		ArrayList mylist=new ArrayList();
 		mylist.add(10);
-		mylist.add("java");
+		mylist.add("java");	
 		mylist.add("SQL");
 		
 		for(int u=0; u<mylist.size(); u++)
@@ -34,10 +78,10 @@
 			System.out.println(mylist.get(u));
 		}
     
-    ArrayList list=new ArrayList();
+   		ArrayList list=new ArrayList();
 		list.add(10);
 		list.add(23);
-		list.add(35);
+		list.add(35);	
 		list.add("java");
 		list.add("API");
 
@@ -76,4 +120,117 @@
 		{
 			System.out.println(j);
 		}
+		
+		
+-------------------------------------------------------------
+1) add(Object o)
+2) addAll(Collection c)
+3) remove(Object o)
+4) removeAll(Collection c)
+5) retainAll(Collection c)
+6) clear()
+7) size()
+8) isEmpty()
+9) contains(object o)
+10) containsAll(Collection c)
+11) toArrays()
+12) iterator()
+
+
+List interface:
+==============================================================================
+there are 3 main classes in List interface
+	1) ArrayList class
+	2) LinkedList Class
+	3) Vector class
+		there is 1 sub class vector class is stack
+ 
+--------------------------------------------------------------------------------------------------
+2) LinkedList Class:
+	- The underlaying data structure is singly/double linkedlist 
+	- inseration order is maintained
+	- duplicate are allowed
+	- null insertion is allowed
+	- heterogenouse Object are allowed 
+	- LinkedList it implements serializable and clonable interface but not a RandomAccess interface
+	- it is best choice for inseration and deletion operation and it is worst choice for Retrival operation
+	
+	
+linkedList define the 6 common methods
+	1) addFirst(object o)
+	2) addLast(Object o)
+	3) getFirst()
+	4) getLast()
+	5) removeFirst()
+	6) removeLast()
+=================================================================================
+diff between arrayList and LinkedList class?
+	- underlaying data structure for arraylist is growable or resizable array
+	- underlaying data structure for linkedlist is singly/double linked list
+	
+	- arraylist is best choice for Retrival operation
+	- linkedlist is best choice for inseration and deletion operation
+	
+	- arraylist it implements RandomAccess, serializable and clonable interface.
+	- Linked list it implements serializable and clonable interface but not a RandomAccess interface
+=====================================================================================
+
+
+		LinkedList<String> ls=new LinkedList<String>();
+		ls.add("java");
+		ls.add("SQL");
+		ls.add("RSP");
+		
+		LinkedList<String> ls1=new LinkedList<String>();
+		ls1.add("Cucumber");
+		ls1.add("Jkins");
+		
+		for(int i=0; i<ls1.size(); i++)
+		{
+			System.out.println(ls1.get(i));
+		}
+		
+		for(String j:ls1)
+		{
+			System.out.println(j);
+		}
+		
+		Iterator<String> it=ls1.iterator();
+		while(it.hasNext()){
+			System.out.println(it.next());
+		}
+		
+		Object[] ti=ls1.toArray();
+		for(Object l:ti)
+		{
+			System.out.println(l);
+		}
+		
+		
+		//add first 
+		ls.addFirst("TestNG");
+		System.out.println(ls);
+		
+		ls.add(2,"Python");
+		System.out.println(ls);
+		
+		ls.set(2,"List");
+		System.out.println(ls);
+		
+		//addLast
+		ls.addLast("Test");
+		System.out.println(ls);
+		
+		//getLast and First 
+		System.out.println(ls.getFirst());
+		System.out.println(ls.getLast());
+		System.out.println(ls.get(0));
+		
+		//remove Last/First
+		System.out.println(ls.removeFirst());
+		System.out.println(ls);
+		System.out.println(ls.removeLast());
+		System.out.println(ls);
+		System.out.println(ls.remove(3));
+		System.out.println(ls);
 		
