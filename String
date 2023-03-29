@@ -18,8 +18,8 @@ String
 		Native memory 
 		New key word creat the new Object creat 
 		Memoery allocation done in Heap Area
-		String s1=new String("Deepak"); //With new key word Two memory address created
-		String s2="Rahul";		//One Memory address created
+		String s1=new String("Deepak"); //With new key word Two memory address created in String Literal Pool 
+		String s2="Rahul";		//One heap Memory address created
 
 		String 
 		String is object contains charter special , charter and numbers. String is immutable , String is slow and consume the memory 		
