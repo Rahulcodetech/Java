@@ -1,7 +1,6 @@
 String 
 		
 		String x="Rahul Pawar";
-		
 		1->String is non primitive data type beacuse size is not fix
 		2->String is sequence(array) of characters
 		3->String is a class and is Syntax "Public final class String extend Object class"
