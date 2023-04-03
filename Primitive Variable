@@ -9,9 +9,9 @@
 		boolean g=false;
 		char h='x';
 		
-		//Arithmetic Operator 
-		//Comparative Operator
-		//Logical Operator 
+		//Arithmetic Operator (+ - * / %)  
+		//Comparative Operator(<, >, =>,<=, )
+		//Logical Operator    (& , !=, | , and or , not equals)
 		
 		System.out.println(a+b);
 		System.out.println(a-b);
