@@ -89,3 +89,16 @@ String
 			System.out.print(b[l]);
 		}
 /-------------------------------------------------------------------------------/
+
+		String a="rahul";
+		for (int i=0; i<a.length(); i++)
+		{
+		if(i%2==0){
+		char x=a.toUpperCase().charAt(i);
+		System.out.print(x);
+		}
+		else{
+		char x=a.toLowerCase().charAt(i);
+		System.out.print(x);
+		}
+		}
