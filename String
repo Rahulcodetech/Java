@@ -36,9 +36,9 @@ String
 		String s2=new String("Hello");
 		StringBuffer s3=new String("Hello");
 		StringBuilder s4=new String("Hello");
-	
-				String x="*#*&#123asdh";
-		
+		String x="*#*&#123asdh";
+
+/---------------------------------------------------------------------/
 		char[] a=x.toCharArray();
 		
 		for(int i=0; i<a.length; i++)
@@ -60,3 +60,31 @@ String
 		}
 		
 		System.out.println("");
+/---------------------------------------------------------------------------------------/
+		String x="Rahul!^#*$123";
+		
+		char[] a=x.toCharArray();
+		
+		for(int i=0; i<a.length; i++)
+		{
+			if(Character.isAlphabetic(a[i]))
+			{
+			System.out.println(a[i]);
+			}
+		}
+		for(int j=0; j<a.length; j++)
+		{
+			if(!(Character.isAlphabetic(a[j])|(Character.isDigit(a[j]))))
+					System.out.print(a[j]);
+		}
+
+/---------------------------------------------------------------------------------/
+
+		//Reverse the string 
+
+		String y="Rahul";
+		char[] b=y.toCharArray();
+		for(int l=b.length-1; l>=0; l--)
+		{
+			System.out.print(b[l]);
+		}
