@@ -31,7 +31,7 @@
 				String[] str=new String[2];
 				str[0]="Java1";
 				str[1]="SQL1";
-				
+				 
 				for(int z=0; z<str.length; z++)
 				{
 					System.out.println(str[z]);
