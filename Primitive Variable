@@ -1,5 +1,4 @@
 		//Primitive variable 
-
 		byte a=10;
 		short b=20;
 		int d=30;
