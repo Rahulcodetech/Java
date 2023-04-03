@@ -13,6 +13,7 @@
 		//Comparative Operator(<, >, =>,<=, )
 		//Logical Operator    (& , !=, | , and or , not equals)
 		
+		//Arithmetic Operator (+ - * / %)  
 		System.out.println(a+b);
 		System.out.println(a-b);
 		System.out.println(a*b);
@@ -21,11 +22,13 @@
 		System.out.println(a++);
 		System.out.println(a--);
 		
+		/Comparative Operator(<, >, =>,<=, )
 		System.out.println(a>b);
 		System.out.println(a<b);
 		System.out.println(a==b);
 		System.out.println(a!=b);
 		
+		//Logical Operator    (& , !=, | , and or , not equals)
 		System.out.println((a>b)&&(a<b));
 		System.out.println((a>b)|(a>b));
 		System.out.println((a!=b));
