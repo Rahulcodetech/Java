@@ -1,125 +1,157 @@
 //Collection Array 
 //Static Array/Fix Size Array 
 //Array 
-	 	int digit[] =new int[4];  //Static Array 
-		digit[0]=10;
-		digit[1]=20;
-		
-		//Static Array
-				
-				int[] it=new int[4];
-				it[0]=10;
-				it[1]=20;
-				it[2]=30;
-				it[3]=40;
-		
-				System.out.println(it);
-				
-				System.out.println(it[2]);
-				
-				for(int j=0; j<it.length; j++)
-				{
-					System.out.println(it[j]);
-				}
-				
-				for(Integer s:it)
-				{
-				 System.out.println(s);	
-				}
-				
-				
-				String[] str=new String[2];
-				str[0]="Java1";
-				str[1]="SQL1";
-				 
-				for(int z=0; z<str.length; z++)
-				{
-					System.out.println(str[z]);
-				}
-				
-				for(Object n:str)
-				{
-					System.out.println(n);
-				}
-				
-				for(String pn:str)
-				{
-					System.out.println(pn);
-				}
-		
-		System.out.println(digit[1]);
-		
-		//---------------------------
-		
-		char chr[]=new char[4];
- //-----------------------------------------------------------------------------------------------------------------------------------------   
- 
- 		//List
-    		ArrayList arr=new ArrayList();  //Dynamic Object Array Array 
-		arr.add(0);
-		arr.add(1);
-		arr.add("java");
-		arr.add("SQL");
-		System.out.println(arr.get(2));
-		
-		ArrayList<String> ar1=new ArrayList<String>();  //
-		ar1.add("Java");
-		ar1.add("SQL");
-		System.out.println(ar1.get(1)+" String Array");
-		
-		
-		ArrayList mylist=new ArrayList();
-		mylist.add(10);
-		mylist.add("java");	
-		mylist.add("SQL");
-		
-		for(int u=0; u<mylist.size(); u++)
-		{
-			System.out.println(mylist.get(u));
-		}
-    
-   		ArrayList list=new ArrayList();
-		list.add(10);
-		list.add(23);
-		list.add(35);	
-		list.add("java");
-		list.add("API");
 
-		System.out.print(list);
+/----------------------------------------------------------------------
+//Static Array
+	byte bt[]=new byte[4];
+	short st[]=new short[4];
+	int it[]=new int[4];
+	long ln[]=new long[4];
+	float ft[]=new float[4];
+	double db[]=new double[4];
+	char chr[]=new char[4];
+	bl[]=new boolean[4];
+	String st1[]=new String[4];
+				
+/----------------------------------------------------------------------
+	int[] it=new int[4];
+	it[0]=10;
+	it[1]=20;
+	it[2]=30;
+	it[3]=40;
+	
+	//print
+	System.out.println(it);
 		
-		ArrayList list1=new ArrayList();
-		list1.add(20);
-		list1.add(10);
+	//print
+	System.out.println(it[2]);
+				
+	//print
+	for(int j=0; j<it.length; j++)
+	{
+	System.out.println(it[j]);
+	}
+				
+	//print
+	for(Integer s:it)
+	{
+	 System.out.println(s);	
+	}
+			
+/---------------------------------------------------------------------
+	String[] str=new String[2];
+	str[0]="Java1";
+	str[1]="SQL1";
 		
-		
-		//Add 
-//		list.addAll(list1);
-//		
-//		System.out.println(list);
-//		System.out.println(list.size());
-		
-		//Remove
-//		list1.removeAll(list);
-//		System.out.println(list1);
-//		System.out.println(list1.size());
-		
-		//Retain all
-		list1.retainAll(list);
-		System.out.println(list1);
-		
-		//Clear all
-		list1.clear();
-		System.out.println(list1);
-		
-		//Index of 
-		int a=list.indexOf(20);
-		System.out.println(a);
-		
-		//Enhanced for loop only for the for generic list 
-		for(Object j:list)
+	//print
+	System.out.println(str);
+			
+	//print 
+	for(int z=0; z<str.length; z++)
 		{
-			System.out.println(j);
+		System.out.println(str[z]);
 		}
+			
+	//print 
+	for(Object n:str)
+		{
+		System.out.println(n);
+		}
+			
+	//print
+	for(String pn:str)
+		{
+		System.out.println(pn);
+		}
+				
+	//print
+	System.out.println(digit[1]);
+
+/------------------------------------------------------------------------
+ 
+ 	//List
+    	ArrayList ar=new ArrayList();
+	ar.add(0);
+	ar.add(12);
+	ar.add("java");
+	ar.add('A');
+	ar.add("&");
+
+	//print
+	System.out.println(ar);
+
+	//print
+	System.out.print(ar.get(2));
+
+	//Print
+	for(int i=0; i<ar.size(); i++)
+	{
+	System.out.print(ar.get(i));
+	}
+
+	//print
+	for(Object j:ar)
+	{
+	System.out.print(j);
+	}
+		
+	ArrayList<String> ar1=new ArrayList<String>(); 
+	ar1.add("Java");
+	ar1.add("SQL");
+	System.out.println(ar1.get(1)+" String Array");
+	ArrayList mylist=new ArrayList();
+	mylist.add(10);
+	mylist.add("java");	
+	mylist.add("SQL");
+		
+	for(int u=0; u<mylist.size(); u++)
+	{
+	System.out.println(mylist.get(u));
+	}
+    
+	ArrayList list=new ArrayList();
+	list.add(10);
+	list.add(23);
+	list.add(35);	
+	list.add("java");
+	list.add("API");
+
+	System.out.print(list);
+		
+	ArrayList list1=new ArrayList();
+	list1.add(20);
+	list1.add(10);
+	
+		
+	//Add 
+	list.addAll(list1);
+		
+	System.out.println(list);
+	System.out.println(list.size());
+		
+	//Remove
+	list1.removeAll(list);
+	System.out.println(list1);
+	System.out.println(list1.size());
+		
+	//Retain all
+	list1.retainAll(list);
+	System.out.println(list1);
+		
+	//Clear all
+	list1.clear();
+	System.out.println(list1);
+		
+	//Index of 
+	int a=list.indexOf(20);
+	System.out.println(a);
+		
+	//Enhanced for loop only for the for generic list 
+	for(Object j:list)
+	{
+	System.out.println(j);
+	}
 		
 		
 -------------------------------------------------------------
