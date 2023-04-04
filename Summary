@@ -1,0 +1,19 @@
+//Primitive Variable 
+//Non Primitive variable
+//Operator, Arithmetic  , comparative, logical Operator. 
+//Byte, short, int,long, float, Double, boolean, char. 
+//String is object contains the character and special character , digit. 
+//String is immutable, non synchronous , not thread safe , high memory and slow to response 
+//Wrap Class
+		
+//List Interface
+//class ->Static Array -> //ArrayList dynamic/List 
+//Class ->LinkList
+//Class ->Vector       -> Stack
+  
+//Queue  FIFO List 
+//PriorityQueue 
+//Linedlist
+//Dequeue -> Dequeue
+ 
+ 
