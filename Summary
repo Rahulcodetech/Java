@@ -1,5 +1,5 @@
-//Primitive Variable 
-//Non Primitive variable
+//Primitive Variable		-> byte , short , int , long, float , double , boolean , char
+//Non Primitive variable	-> 
 //Operator, Arithmetic  , comparative, logical Operator. 
 //Byte, short, int,long, float, Double, boolean, char. 
 //String is object contains the character and special character , digit. 
@@ -15,5 +15,10 @@
 //PriorityQueue 
 //Linedlist
 //Dequeue -> Dequeue
- 
- 
+
+//Set
+//HasSet
+//LinkedHasSet
+//SortedSet	->TreeSet
+//Hashtable
+
