@@ -79,3 +79,11 @@ String
 		System.out.print(x);
 		}
 		}
+
+/-------------------------------------------------------------------------------/
+
+	String x="Cucumber";
+	
+	System.out.println(x.substring(3,5));
+	System.out.println(x.substring(0,5));
+	System.out.println(x.substring(3,6));
