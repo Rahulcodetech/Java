@@ -7,54 +7,82 @@
 		
 		//Static Array
 				
-				int[] it=new int[4];
-				it[0]=10;
-				it[1]=20;
-				it[2]=30;
-				it[3]=40;
+		int[] it=new int[4];
+		it[0]=10;
+		it[1]=20;
+		it[2]=30;
+		it[3]=40;
 		
-				System.out.println(it);
+		System.out.println(it);
 				
-				System.out.println(it[2]);
+		System.out.println(it[2]);
 				
-				for(int j=0; j<it.length; j++)
-				{
-					System.out.println(it[j]);
-				}
+		for(int j=0; j<it.length; j++)
+		{
+		System.out.println(it[j]);
+		}
 				
-				for(Integer s:it)
-				{
-				 System.out.println(s);	
-				}
+		for(Integer s:it)
+		{
+		System.out.println(s);	
+		}
 				
 				
-				String[] str=new String[2];
-				str[0]="Java1";
-				str[1]="SQL1";
+		String[] str=new String[2];
+		str[0]="Java1";
+		str[1]="SQL1";
 				
-				for(int z=0; z<str.length; z++)
-				{
-					System.out.println(str[z]);
-				}
-				
-				for(Object n:str)
-				{
-					System.out.println(n);
-				}
-				
-				for(String pn:str)
-				{
-					System.out.println(pn);
-				}
-		
+		for(int z=0; z<str.length; z++)
+		{
+		System.out.println(str[z]);
+		}
+			
+		for(Object n:str)
+		{
+		System.out.println(n);
+		}
+			
+		for(String pn:str)
+		{
+		System.out.println(pn);
+		}
 		System.out.println(digit[1]);
-		
 		//---------------------------
 		
 		char chr[]=new char[4];
  //-----------------------------------------------------------------------------------------------------------------------------------------   
  
  		//List
+		
+		ArrayList ar=new ArrayList();
+		ar.add(10);
+		ar.add(20);
+		ar.add("java");
+		ar.add("@#");
+		
+		System.out.println(ar);
+				
+		for(int i=0; i<ar.size(); i++)
+		{
+			System.out.print(ar.get(i));
+		}
+		
+		System.out.println(" ");
+		
+		for(Object o:ar)
+		{
+			System.out.print(o);
+		}
+		System.out.println(" ");
+		
+		Iterator<Object> it=ar.iterator();
+		while(it.hasNext())
+		{
+			System.out.print(it.next());
+		}
+/----------------------------------------------------------------------------------------------------------------------
+		
+		
     		ArrayList arr=new ArrayList();  //Dynamic Object Array Array 
 		arr.add(0);
 		arr.add(1);
@@ -75,7 +103,7 @@
 		
 		for(int u=0; u<mylist.size(); u++)
 		{
-			System.out.println(mylist.get(u));
+		System.out.println(mylist.get(u));
 		}
     
    		ArrayList list=new ArrayList();
