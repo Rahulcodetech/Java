@@ -12,32 +12,43 @@
 	boolean[] bl=new boolean[5];
 	char[] chr=new char[5];
 		
-	 int digit[] =new int[4];  //Static Array 
-	digit[0]=10;
-	digit[1]=20;
+	 		int[] it=new int[5];
+		it[0]=10;
+		it[1]=20;
+		it[3]=30;
+		it[4]=40;
+
+		System.out.println(it);
 		
-	//Static Array
-				
-	int[] it=new int[4];
-	it[0]=10;
-	it[1]=20;
-	it[2]=30;
-	it[3]=40;
+		for(int i=0; i<it.length; i++)
+		{
+			System.out.println(it[i]);
+		}
 		
-	System.out.println(it);
-				
-	System.out.println(it[2]);
-				
-	for(int j=0; j<it.length; j++)
-	{
-	System.out.println(it[j]);
-	}
-				
-	for(Integer s:it)
-	{
-	System.out.println(s);	
-	}
-				
+		for(Integer e:it)
+		{
+			System.out.println(e);
+		}
+		
+
+		System.out.println(it[2]);
+		
+		Scanner sc =new Scanner(System.in);
+		int size=sc.nextInt();
+		int num[] =new int[size];
+		
+		for(int j=0; j<size; j++)
+		{
+			num[j]=sc.nextInt();
+		}
+		
+		System.out.println(num[0]);
+		
+		for(int l=0; l<num.length; l++)
+		{
+			System.out.print(num[l]);
+		}
+/-----------------------------------------------------------------------
 				
 	String[] str=new String[2];
 	str[0]="Java1";
@@ -58,11 +69,8 @@
 	System.out.println(pn);
 	}
 	System.out.println(digit[1]);
-	//---------------------------
 		
-	char chr[]=new char[4];
- //-----------------------------------------------------------------------------------------------------------------------------------------   
- 
+/------------------------------------------------------------------------------------------
  	//List
 		
 	ArrayList ar=new ArrayList();
@@ -91,7 +99,7 @@
 	{
 	System.out.print(it.next());
 	}
-/----------------------------------------------------------------------------------------------------------------------
+/------------------------------------------------------------------------------------------------------
 		
 		
     	ArrayList arr=new ArrayList();  //Dynamic Object Array Array 
@@ -161,7 +169,7 @@
 	}
 	
 		
--------------------------------------------------------------
+/--------------------------------------------------------------------------------------------
 1) add(Object o)
 2) addAll(Collection c)
 3) remove(Object o)
