@@ -49,7 +49,29 @@
 			System.out.print(num[l]);
 		}
 /-----------------------------------------------------------------------
-				
+
+	//Acceding and descending order 
+		int[] it=new int[] {10,20,30,55,2,4,3};
+		
+		int temp;
+		for(int i=0; i<it.length; i++)
+		{
+			for(int j=i; j<it.length; j++)
+			{
+				if(it[i]>it[j]){
+				temp=it[i];
+				it[i]=it[j];
+				it[j]=temp;}
+			}
+		}
+		
+		for(Integer e:it)
+		{
+			System.out.println(e);
+		}
+		
+/-----------------------------------------------------------------------
+
 	String[] str=new String[2];
 	str[0]="Java1";
 	str[1]="SQL1";
@@ -72,7 +94,28 @@
 		
 /------------------------------------------------------------------------------------------
  	//List
-		
+	
+	
+	Basis				Array								ArrayList
+					An array is a dynamically-created object. 			The ArrayList is a class of Java Collections framework.
+	Definition			It serves as a container that holds the constant number of	It contains popular classes like Vector, HashTable, and HashMap.
+					values of the same type. It has a contiguous memory location.
+					
+	Static/ Dynamic			Array is static in size.					ArrayList is dynamic in size.
+	
+	Resizable			An array is a fixed-length data structure.			ArrayList is a variable-length data structure. 
+													It can be resized itself when needed.
+	Initialization			It is mandatory to provide the size of an array			We can create an instance of ArrayList without specifying its size.
+	
+	Primitive/ Generic type		An array can store both objects and primitives type.		We cannot store primitive type in ArrayList. It automatically converts 
+													primitive type to object.
+	Iterating Values		We use for loop or for each loop to iterate over an array.	We use an iterator to iterate over ArrayList.
+	
+	Length				Array provides a length variable which denotes the 		ArrayList provides the size() method to determine the size of ArrayList.
+					length of an array.	
+	Single/ Multi-Dimensional	Array can be multi-dimensional.					ArrayList is always single-dimensional.
+	
+	
 	ArrayList ar=new ArrayList();
 	ar.add(10);
 	ar.add(20);
@@ -98,6 +141,38 @@
 	while(it.hasNext())
 	{
 	System.out.print(it.next());
+	}
+	
+	//find Maximum number in array 
+	
+	ArrayList<Integer> it=new ArrayList<Integer>();
+	it.add(55);
+	it.add(20);
+	it.add(30);
+	it.add(35);
+	it.add(4090);
+	it.add(55);
+	
+	int max=it.get(0);
+		
+	for(int j=0; j<it.size(); j++){
+			
+	if(it.get(j)>max)
+	{
+		max=it.get(j);
+	}
+	   System.out.println(max);
+	}
+		
+	//find Minimum number is 
+	int min=num.get(0);
+	
+	for(int j=0; j<num.size(); j++)
+	{
+		if(num.get(j)<min)
+		min=num.get(j);
+	}
+	System.out.println("Minimum number is "+ min);
 	}
 /------------------------------------------------------------------------------------------------------
 		
