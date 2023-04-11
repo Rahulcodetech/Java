@@ -1,0 +1,330 @@
+Diff between final keyword,finally block and finalize() method in java?		------VVVVVVIMP
+==============================================================================================
+
+Exception Handling in Java:
+==============================================================================================
+	- An Exception is an event that occurs during the test execution of a program when normal execution of a program interrupted.
+	- Exception mechanism is used to handle run time exception.
+
+there are 2 types of errors in program
+	1) syntax error or compile time error.
+		- When we will write program that time we will get error is called as syntax error.
+	2) Run Time Error
+		- after running or executing the program when we will get error is called as run time error.
+
+
+There are 2 main types of exception
+	1) Checked Exception or Caught exception
+			-The classes that directly inherit the throwable class is called as checked Exception
+			-The exceptions occured at the compile time itself
+		e.g
+			IOException,SQLException,ClassNotFoundException are checked at compile time.
+
+	2) Unchecked Exception or Uncaught exception
+		-The class that inherited the run time Exception are called as unchecked exception.
+		-The exceptions occured after running a program or after execution
+		
+		e.g
+			Arithmetic Exception, nullPointerException,ArrayIndexOutOfBoundException etc,...
+		unchecked exception are not checked at compile time they are checked with run time.
+-------------------------------
+package Practice;
+
+public class Demo2 {
+
+	public static void main(String[] args) throws InterruptedException  {
+		
+		//Uncaught exception or Unchecked exception 
+		int i=10/0; // 10/0=> infinity
+		System.out.println(i);//
+		
+		//Caught exception or Checked exception 
+		Thread.sleep(2000);
+
+	}
+
+}
+
+------------------------------
+Unchecked Exception:
+-----------------------------
+
+1) NullPointerException:
+	if we have no value for variable still we are trying to perform operation on that variable then we 
+	will get NullPointerException.
+	
+	e.g
+		String a =null;
+
+		syso(a.lenght());
+
+package ExceptionHandling;
+
+public class Demo1 {
+
+	public static void main(String[] args) {
+		
+		String a=null;
+		System.out.println(a.length());
+
+	}
+
+}
+----------------
+package ExceptionHandling;
+
+public class Demo2 {
+	
+	int a=10;
+
+	public static void main(String[] args) {
+		
+		Demo2 obj=new Demo2();
+		obj=null;
+		System.out.println(obj.a);
+		
+
+	}
+
+}
+
+--------------------------------------
+2) ArithmeticException:
+	if we devide any number by zero then we will get arithemetic exception.
+
+e.g
+		int a=10/0;
+
+package ExceptionHandling;
+
+public class Demo3 {
+
+	public static void main(String[] args) {
+		System.out.println("main method is started");
+		int a=10;
+		int b=0;
+		int c=a/b;
+		System.out.println(c);
+		System.out.println("main method is ended");
+
+	}
+
+}
+
+--------------------------------------
+3.NumberFormatExeception
+=>
+package ExceptionHandling;
+
+public class Demo4 {
+
+	public static void main(String[] args) {
+		String u="200A";
+		int t = Integer.parseInt(u);
+		System.out.println(t);
+
+	}
+
+}
+--------------
+package ExceptionHandling;
+
+public class Demo4 {
+
+	public static void main(String[] args) {
+		String u="API";
+		int t = Integer.parseInt(u);
+		System.out.println(t);
+
+	}
+
+}
+--------------------------------------
+4.ArrayIndexOutOfBoundsException
+=> 
+int [] abc=new int[4];
+abc[0]=10;
+abc[1]=20;
+abc[2]=30;
+abc[3]=40;
+
+--------------
+package ExceptionHandling;
+
+public class Demo3 {
+
+	public static void main(String[] args) {
+		System.out.println("main method is started");
+		int a=10;
+		int b=0;
+		int c=a/b;
+		System.out.println(c);
+		System.out.println("main method is ended");
+
+	}
+
+}
+------------------------------
+5.StringIndexOutOfBoundsException
+=> 
+package ExceptionHandling;
+
+public class Demo8 {
+
+	public static void main(String[] args) {
+		System.out.println("main method is started");
+		
+		String a="API";
+		System.out.println(a.charAt(3));
+	
+	}
+
+	}
+
+
+
+---------------------------
+How to handle exception:
+-----------------------------
+1.try-catch block 
+
+syntax:
+	try
+	{
+		//risky code inside the try block
+	}
+	catch(Exception e)
+	{
+		//handle exception code
+	}
+
+e.g
+	try
+	{
+		int a=10;
+		int b=0;
+		Syso(a/b);
+	}
+	catch(ArithemeticException abc)
+	{
+		syso("catch block of code");
+	}
+--------------------
+package ExceptionHandling;
+
+public class Demo6 {
+
+	public static void main(String[] args) {
+		System.out.println("Main method is started ");
+		int a=10;
+		int b=0;
+		try {
+			System.out.println("try block is started");
+			System.out.println(a/b);
+			System.out.println("try block is ended");
+		}
+		catch(ArithmeticException e){
+			System.out.println("catch block of code");
+		}
+		
+		System.out.println("main method is ended");
+		
+
+	}
+
+}
+-----------------------------
+printStackTrace()
+=> It is used to trace the line where the exception is occuring
+package ExceptionHandling;
+
+public class Demo7 {
+
+	public static void main(String[] args) {
+		System.out.println("main method is started");
+		try {
+			int i=10/0;
+		}
+		catch (ArithmeticException e) {
+			e.printStackTrace();
+		}
+		System.out.println("demo code");
+	}
+
+}
+-------------------------
+getMessage()
+=>
+It is used to print the exception error 
+
+package ExceptionHandling;
+
+public class Demo7 {
+
+	public static void main(String[] args) {
+		System.out.println("main method is started");
+		try {
+			int i=10/0;
+		}
+		catch (ArithmeticException e) {
+			e.printStackTrace();
+			System.out.println(e.getMessage());
+		}
+		System.out.println("demo code");
+	}
+
+}
+-------------------------------
+StringIndexOutOfBoundsException
+
+package ExceptionHandling;
+
+public class Demo8 {
+
+	public static void main(String[] args) {
+		System.out.println("main method is started");
+		
+		String a="API";
+//		System.out.println(a.charAt(3));
+		try {
+			System.out.println("try block is started");
+			System.out.println(a.charAt(3));
+			System.out.println("try block is ended");
+		}
+		catch(StringIndexOutOfBoundsException n) {
+			System.out.println("Catch block");
+		}
+		System.out.println("main method is ended");
+	}
+
+}
+----------------------------------
+package ExceptionHandling;
+
+public class Demo8 {
+
+	public static void main(String[] args) {
+		System.out.println("main method is started");
+		
+		String a=null;
+//		System.out.println(a.charAt(0));
+		try {
+			System.out.println("try block is started");
+			System.out.println(a.length());
+			System.out.println("try block is ended");
+		}
+		catch(NullPointerException n) {
+			System.out.println("Catch block");
+		}
+		System.out.println("main method is ended");
+	}
+
+	}
+
+--------------------------------------
+
+
+
+
+
+
