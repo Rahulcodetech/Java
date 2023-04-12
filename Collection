@@ -12,7 +12,7 @@
 	boolean[] bl=new boolean[5];
 	char[] chr=new char[5];
 		
-	 		int[] it=new int[5];
+	 	int[] it=new int[5];
 		it[0]=10;
 		it[1]=20;
 		it[3]=30;
