@@ -1,0 +1,9 @@
+If block assigment 
+Assigning grades (A, B, C) based on the percentage obtained by a student.
+checking number is positive, negative, or zero
+Write a Java program to solve quadratic equations 
+ask three numbers and print the greatest number
+take any number between 1 to 7 and print the week day name 
+Enter a year and find februvary is leap or not 
+((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0)))
+print first 10 natural number
