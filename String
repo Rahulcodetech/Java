@@ -30,7 +30,9 @@ String
 		slow						fast than string 		faster than buffer
 		high memory if change the 			low Memory 			Low Memory 
 		
-		
+		when ever any operation is created on the any string object then it will creat a new object and do not change the old object. 
+		https://www.youtube.com/watch?v=4cEsJtuW4YY
+				
 		four ways to write the String
 	 	String s1="Hello";
 		String s2=new String("Hello");
