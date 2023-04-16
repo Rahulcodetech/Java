@@ -290,6 +290,9 @@ diff between arrayList and LinkedList class?
 	- underlaying data structure for arraylist is growable or resizable array
 	- underlaying data structure for linkedlist is singly/double linked list
 	
+	-Continues memory location	
+	-Linked List stored in node or non continues
+	
 	- arraylist is best choice for Retrival operation
 	- linkedlist is best choice for inseration and deletion operation
 	
