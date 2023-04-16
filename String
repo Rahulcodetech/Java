@@ -26,7 +26,7 @@ String
 		immutable 					mutable				mutable	
 		StringConstantpool/heap				heap				heap
 		Non synchronized 				synchronized			Non Synchronized
-		Not thread safe 				thread safe			Not thread safe
+		thread safe beacuse it is immutable		thread safe			Not thread safe
 		slow						fast than string 		faster than buffer
 		high memory if change the 			low Memory 			Low Memory 
 		
