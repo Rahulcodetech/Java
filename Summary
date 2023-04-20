@@ -3,7 +3,7 @@
 //Operator, Arithmetic  , comparative, logical Operator. 
 //Byte, short, int,long, float, Double, boolean, char. 
 //String is object contains the character and special character , digit. 
-//String is immutable, non synchronous , not thread safe , high memory and slow to response 
+//String is immutable, non synchronous , thread safe , high memory and slow to response 
 //Wrap Class
 		
 //List Interface
