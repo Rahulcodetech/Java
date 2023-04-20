@@ -8,5 +8,55 @@ Hashtable ->
 
 Map Property Sotred data in key and value 
 Key is aways unique and value can duplicate
-We can store only one null value 
-Map does not follow the insertion and sorting order
+We can store only one null key vlue
+we can store duplicate value
+map.put(key, Value); key and value paire know as "entry"
+hashMap does not follow the insertion and sorting order
+hashmap is non synchronised 
+
+
+HapMap
+		Map map= new HashMap();
+		map.put("101","Rahul");
+		map.put("102", "Pawar");
+		
+		map.entrySet();
+
+		map.remove(102);
+		map.replace(102, "Usha");
+		map.containsKey(101);
+		map.containsValue("Rahul");
+		map.remove(102);
+		map.size();
+		
+    //HashSet 
+    HashSet underine data structre is hashtable
+    HasSet is backed by hashMap
+    HashSet stroed value/element according to their hashcode value 
+    HasSet does not store the duplicate value /element
+    Hasset does not stoer multiple null value /element
+    HasSet doe not follow sorting and intertion value 
+    HasSet are non snychronise data base / speed is fast but data inconsistancy
+    
+    HashSet hash=new HashSet();
+		hash.add(10);
+		hash.add(20);
+		hash.add(50);
+		hash.add("Rahul");
+		hash.add("Java");
+		
+		System.out.println(hash);
+		
+		for(Object e:hash)
+		{
+			System.out.println(e);
+		}
+		Iterator it=hash.iterator();
+		while(it.hasNext())
+		{
+		System.out.println(it.next());	
+		}
+		
+      
+    
+    
