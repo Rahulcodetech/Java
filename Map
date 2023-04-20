@@ -1,0 +1,12 @@
+Map does not inherit the collection interface 
+present in java.util pakage
+Map interface hierachy
+Map       -> HashMap, TreeMap, HashTable
+HashMap   ->LinkedHashMap
+TreeMap   ->Sorted map -.Navigabel Map 
+Hashtable ->
+
+Map Property Sotred data in key and value 
+Key is aways unique and value can duplicate
+We can store only one null value 
+Map does not follow the insertion and sorting order
