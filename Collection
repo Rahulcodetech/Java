@@ -359,3 +359,513 @@ diff between arrayList and LinkedList class?
 		System.out.println(ls.remove(3));
 		System.out.println(ls);
 		
+Collection Interface
+
+Set interface
+----------------------------------------------------------------------------------------------------------------------------
+SortedSet interface:
+=============================================================================
+It is a child interface of set.
+
+If we want to represent a group of individual objects according to some sorting order and duplicates 
+are not allowed then we should go for SortedSet. 
+
+- {1,2,3}   {3,2,1}   {3,1,2} => Yes  
+- {1,2,3,4,5,6,7,8} => Some sorting is provided is here
+
+	- SortedSet is child interface of Set interface.
+	SortedSet interface have 6 methods
+	1) first()				it return the first element from the set
+	2) last() 				it return the last element from the set
+	3) headSet(element) 			return all the elements from the set before the specified element
+	4) tailSet(element)			return all the elements from the set after specified element and also that specified element
+	5) subSet(element1,element2)		return the all the elements between element1 and element2. and also return element 1
+	6) comparator()				return comparator that can be used to order element in set.
+----------------------------------
+        S1={100,101,103,104,107,110,115}
+
+	-first() - 100
+	-last()  - 115
+	-headSet(104) - [100,101,103]
+	-tailSet(104) - [104,104,110,115]
+	-subSet(103,110) -[103,104,107]
+	-comparator - default natural sorting order => null
+Note: 
+	-default natural sorting order for number -Ascending
+	-default natural sorting order for String -Alphabetical order
+------------
+
+package treeSetConcept;
+
+import java.util.TreeSet;
+
+public class Demo1 {
+
+	public static void main(String[] args) {
+		TreeSet t = new TreeSet();
+		t.add(10);
+		t.add(5);
+		t.add(97);
+		t.add(66);
+		t.add(99);
+		System.out.println(t);
+		System.out.println("************");
+		
+		TreeSet r = new TreeSet();
+		r.add("API");
+		r.add("JAVA");
+		r.add("HAVA");
+		r.add("IAVA");
+		r.add("KAVA");
+		System.out.println(r);
+
+	}
+
+}
+
+==============================================================================
+NavigableSet interface
+	- it child interface of SortedSet interface.
+	- we can access all the methods from the SortedSet interface.
+	- NavigableSet interface define some more methods
+
+	1) pollFirst()		return and remove first element from set
+	2) pollLast()		return and remove the last element from the set
+	3) higher()		return the lowest element among the those element that are greater than specified element
+	4) lower()		return and greatest elements among those element that are less than specified element
+	5) descendingSet()	reverse the order element is set.
+	6) ceiling()		
+	7) floor()			
+	
+=================================================================================
+TreeSet class:
+	- it is child class of NavigableSet interface
+			or
+	- it implements class of NavigableSet interface.
+	- it is grandchild class of SortedSet interface.
+	- underlaying datastructure is balanced tree
+	- duplicate are not allowed
+	- inseration order is not maintained(But some sorting order is maintained)
+	- Hetrogenouse object are not allowed.(VIMP)
+	- null insertion is not allowed.	
+
+syntax:
+	TreeSet t =new TreeSet();
+	
+
+----------------------
+package treeSetConcept;
+
+import java.util.TreeSet;
+
+public class Basics {
+
+	public static void main(String[] args) {
+
+		TreeSet t1 = new TreeSet();
+		t1.add("A");
+		t1.add("a");
+		t1.add("B");
+		t1.add("Z");
+		t1.add("L");
+//		t1.add(10); // ClassCastException => Heterogeneous objects are not allowed
+		t1.add(null); // NullPointerException 
+		
+		System.out.println(t1); //
+
+	}
+
+}
+----------------------------------
+package Tutorial6;
+
+import java.util.TreeSet;
+
+public class Demo1 {
+
+	public static void main(String[] args) {
+		TreeSet t1 = new TreeSet();
+		t1.add("A");
+		t1.add("B");
+		t1.add("C");
+		t1.add("D");
+		
+		TreeSet t2 = new TreeSet();
+		t2.add("P");
+		t2.add("Q");
+		t2.add("R");
+		t2.add("S");
+		
+		System.out.println(t2);
+		
+		t2.addAll(t1);
+		
+		System.out.println(t2);
+		//t2.removeAll(t1);
+		//t2.retainAll(t1);
+		System.out.println(t2.containsAll(t1));
+		
+			
+	}
+
+}
+---------------------------------
+package Tutorial6;
+
+import java.util.TreeSet;
+
+public class Demo1 {
+
+	public static void main(String[] args) {
+		TreeSet t1 = new TreeSet();
+		t1.add("A");
+		t1.add("B");
+		t1.add("C");
+		t1.add("D");
+		
+		TreeSet t2 = new TreeSet();
+		t2.add("P");
+		t2.add("Q");
+		t2.add("R");
+		t2.add("S");
+		
+		System.out.println(t2);
+		
+		t2.addAll(t1);
+		t2.remove("C");
+		System.out.println(t2);
+		System.out.println(t2.size());
+		System.out.println(t2.isEmpty());
+		t2.clear();
+		
+		System.out.println(t2);
+			
+	}
+}
+===========================================================
+
+package UtilsLayer;
+
+import java.time.Duration;
+import java.util.List;
+import java.util.TreeSet;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Demo1 {
+
+	public static void main(String[] args) {
+
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
+		driver.get("https://www.facebook.com/reg");
+
+		WebElement wb = driver.findElement(By.name("birthday_month"));
+
+		Select sel = new Select(wb);
+
+		List<WebElement> ls = sel.getOptions();
+
+		TreeSet t = new TreeSet();
+
+		for (WebElement abc : ls) 
+		{
+			String a = abc.getText();
+			t.add(a);
+		}
+
+		System.out.println(t);
+
+	}
+
+}
+
+================================================
+package treeSetConcept;
+
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+public class Demo3 {
+
+	public static void main(String[] args) {
+		
+		SortedSet<String> t1 = new TreeSet<String>();
+		t1.add("A");
+		t1.add("B");
+		t1.add("C");
+		t1.add("D");
+		t1.add("E");
+		t1.add("F");
+		t1.add("G");
+		t1.add("Y");
+		t1.add("H");
+		
+		System.out.println(t1.first());
+		System.out.println(t1.last());
+		System.out.println(t1.headSet("D"));
+//		
+		System.out.println(t1.tailSet("D"));
+//		
+		System.out.println(t1.subSet("A", "E"));
+		
+	}
+
+}
+------------------------------
+package Tutorial6;
+
+import java.util.Comparator;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+public class Demo2 {
+
+	public static void main(String[] args) {
+		SortedSet<String> t1 = new TreeSet<String>();
+		t1.add("A");
+		t1.add("B");
+		t1.add("C");
+		t1.add("D");
+		t1.add("E");
+		t1.add("F");
+		t1.add("G");
+		t1.add("Y");
+		t1.add("H");
+		
+		System.out.println(t1.first()); // A
+		System.out.println(t1.last()); // Y
+		System.out.println(t1.headSet("D"));
+		
+		System.out.println(t1.tailSet("B"));
+		
+		System.out.println(t1.subSet("A", "E"));
+		
+	}
+
+}
+
+===================================================================================
+package Tutorial6;
+
+import java.util.Comparator;
+import java.util.NavigableSet;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+public class Demo2 {
+
+		//SortedSet interface it implement the Comparator interface
+		//NavigableSet interface it implement the Comparable interface
+	
+	public static void main(String[] args) {
+		NavigableSet<String> t1 = new TreeSet<String>();
+		
+		t1.add("A");
+		t1.add("B");
+		t1.add("C");
+		t1.add("D");
+		t1.add("E");
+		t1.add("F");
+		t1.add("G");
+		t1.add("H");
+		
+		System.out.println(t1);
+		
+//		System.out.println(t1.pollFirst());
+//		System.out.println(t1.pollLast());
+		
+		System.out.println(t1.higher("D"));
+		System.out.println(t1.lower("C"));
+		System.out.println(t1);
+		System.out.println(t1.descendingSet());
+	
+		
+	}
+
+}
+-----------------
+package treeSetConcept;
+
+import java.util.NavigableSet;
+import java.util.TreeSet;
+
+public class Demo4 {
+
+	public static void main(String[] args) {
+		
+		NavigableSet<String> t1 = new TreeSet<String>();
+		
+		t1.add("A");
+		t1.add("B");
+		t1.add("C");
+		t1.add("D");
+		t1.add("E");
+		t1.add("F");
+		t1.add("G");
+		t1.add("H");
+		t1.add("H");
+		System.out.println(t1.size());
+		
+		System.out.println(t1);
+		
+		System.out.println(t1.pollFirst());
+		System.out.println(t1.pollLast());
+		
+		System.out.println(t1.higher("D")); //E
+		System.out.println(t1.lower("C")); // 
+//		System.out.println(t1);
+		System.out.println(t1.descendingSet()); // [G, F, E, D, C, B]
+
+	}
+
+}
+
+=====================================================================================
+Cursors in Collection:
+	if u want to get object one by one in Collection then we can go for Cursors 
+	
+there are 3 types of Cursors in Collection
+	1) Enumeration interface
+	2) Iterator interface
+	3) ListIterator  interface
+-------------------------------------------------------------------------------------------
+1) Enumeration interface:		version 1.0
+	it is an cursor to retrive the object from the Vector class
+	- it define the 2 methods
+	1) hasMoreElements()			boolean
+	2) nextElement()			Object
+	
+package Tutorial6;
+
+import java.util.Enumeration;
+import java.util.Vector;
+
+public class Demo3 {
+
+	public static void main(String[] args) {
+		
+		Vector v =new Vector();
+		v.add("A");
+		v.add(null);
+		v.add(100);
+		v.add("A");
+		
+		
+		Enumeration  a =v.elements();
+		
+		while(a.hasMoreElements())
+		{
+			Object c =a.nextElement();
+			System.out.println(c);
+		}
+		
+		
+
+	}
+
+}
+
+============================================================
+2) Iterator interface:			java 1.2 v
+	if u want to get object one by one in Collection then we can go for Cursors 
+	- Iterator interface it define the 3 methods
+	1) hasNext()		boolean
+	2) next()		Object
+	3) remove()		void
+
+
+package Tutorial6;
+
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class Demo3 {
+
+	public static void main(String[] args) {
+		
+		HashSet v =new HashSet();
+		v.add("A");
+		v.add(null);
+		v.add(100);
+		v.add("A");
+		
+		Iterator it =v.iterator();
+	
+		while(it.hasNext())
+		{
+		
+			System.out.println(it.next());
+			it.remove();
+		}
+		
+	}
+
+}
+
+=================================================================
+3) ListIterator  interface:			1.4 version
+	it child interface of Iterator interface
+	it is appliable for only List interface classes.
+
+	
+	it define the 9 methods
+	1) hasNext()
+	2) next()
+	3) nextIndex()
+	4) hasPrevious()
+	5) previous()
+	6) previousIndex()
+	7) remove()
+	8) set(Object o)
+	9) add(Object o)
+
+
+package Tutorial6;
+
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+public class Demo3 {
+
+	public static void main(String[] args) {
+		
+		LinkedList<String> t1 = new LinkedList<String>();
+		t1.add("A");
+		t1.add("B");
+		t1.add("C");
+		t1.add("D");
+		
+		ListIterator<String> it =t1.listIterator();
+		
+		it.add("E");
+		
+		while(it.hasNext())
+		{
+			String a =it.next();
+			
+			
+//			if(a.equals("C"))
+//			{
+//				it.set("E");
+//			}
+		}
+		
+		System.out.println(t1);
+
+	}
+
+}
+----------------------------------------------------
+
+
