@@ -1,0 +1,83 @@
+2.User defined method
+	1.Non Static method 
+		-No static keyword
+	2.Static method
+		-Static keyword is avaialble
+
+Note: We can declare user defined method before the main method or after the main method but inside the class
+-------------
+
+Access modifier:
+------------
+There are 4 types of access modifier
+	1.public
+	2.private
+	3.protected
+	4.default
+
+void : Non Return Type keyword
+methodname : any name
+
+How to call non-static method in main method
+	-We always call non static method inside the main method by using object creation of current class
+
+How to create an object
+	-ClassName ReferenceName = new ClassName();
+	- MethodConcept12 abc = new MethodConcept12();
+
+	object = new MethodConcept();
+	objectName/reference Name = abc (any name)
+
+How to call non ststic method
+	-objectName.methodName();
+	-e.g: abc.test1();
+===============================
+Declaration of non-static method
+
+
+package SeleniumBasics;
+
+import java.lang.reflect.Array;
+import java.time.Duration;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
+import java.util.TreeSet;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Auto {
+	
+	public void Add() {int a=10; int b=20; int c=a+b; System.out.println(c);}
+	//Non Static method without return and zero argument 
+	
+	public void Subtract(int a, int b) { int c=a-b; System.out.println(c);}
+	//Non Static method without return and and multiple argument/Parameter
+	
+	public int Multiply() {int a=10; int b=30; int c=a*b; System.out.println(c); return c;}
+	//Non Static method with return and zero argument 
+	
+	public int Division(int a, int b) { int c=a/b; System.out.println(c); return c;}
+	//Non static method with return and multiple argument
+	
+	public static void main(String[] args) {
+	Auto math=new Auto ();
+	math.Add();
+	math.Subtract(30, 20);
+	math.Multiply();
+	math.Division(25, 35);
+	
+	}
+}
