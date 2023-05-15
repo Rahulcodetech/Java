@@ -1,0 +1,27 @@
+    ArrayList<String> names=new ArrayList<String>();
+		names.add("Abhay");
+		names.add("Avinah");
+		names.add("Adas");
+		names.add("Rahul");
+		names.add("Vishal");
+		
+		Long c=names.stream().filter(s->s.startsWith("A")).count();
+		System.out.println(c);
+		
+		long d=Stream.of("Abhay","Avinah","Adas","Rahul","Vishal").filter(s->
+		{
+		s.startsWith("A");
+		return true;
+		}).count();
+		
+		System.out.println(d);
+		
+		names.stream().filter(s->s.length()>5).forEach(s->System.out.println(s));
+		names.stream().filter(s->s.length()>5).limit(1).forEach(s->System.out.println(s));
+		
+		names.stream().filter(s->s.endsWith("l")).map(s->s.toUpperCase()).forEach(s->System.out.println(s));
+		
+		List<String> name=Arrays.asList("Abhay","Avinah","Adas","Rahul","Vishal");
+		name.stream().filter(s->s.startsWith("A")).sorted().map(s->s.toUpperCase()).forEach(s->System.out.println(s));
+		
+		
