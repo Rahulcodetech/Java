@@ -1,4 +1,4 @@
-    ArrayList<String> names=new ArrayList<String>();
+   ArrayList<String> names=new ArrayList<String>();
 		names.add("Abhay");
 		names.add("Avinah");
 		names.add("Adas");
@@ -23,5 +23,11 @@
 		
 		List<String> name=Arrays.asList("Abhay","Avinah","Adas","Rahul","Vishal");
 		name.stream().filter(s->s.startsWith("A")).sorted().map(s->s.toUpperCase()).forEach(s->System.out.println(s));
+		
+		List<Integer> values=Arrays.asList(1,2,3,4,5,6);
+		values.stream().distinct().forEach(s->System.out.print(s));
+		values.stream().distinct().sorted().collect(Collectors.toList());
+		System.out.println(values.get(0));
+		
 		
 		
