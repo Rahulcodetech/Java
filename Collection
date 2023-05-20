@@ -298,6 +298,9 @@ diff between arrayList and LinkedList class?
 	
 	- arraylist it implements RandomAccess, serializable and clonable interface.
 	- Linked list it implements serializable and clonable interface but not a RandomAccess interface
+	
+	-ArrayList is initialized, with default capacity of 10 is assigned to the ArrayList.	
+	-In LinkedList, an empty list is created when a LinkedList is initialized.
 =====================================================================================
 
 
