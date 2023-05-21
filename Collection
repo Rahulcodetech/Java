@@ -385,6 +385,16 @@ are not allowed then we should go for SortedSet.
 	5) subSet(element1,element2)		return the all the elements between element1 and element2. and also return element 1
 	6) comparator()				return comparator that can be used to order element in set.
 ----------------------------------
+	HasSet Property 
+	1. value stored in Map as hascode 
+	2. Does not store the duplicate element 
+	3. Can not store multiple null values
+	4. Can not follow insertion order 
+	5. does not follow to sort the data 
+	6. data is non sychronised data
+
+----------------------------------
+
         S1={100,101,103,104,107,110,115}
 
 	-first() - 100
