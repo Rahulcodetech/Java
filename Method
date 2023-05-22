@@ -81,3 +81,52 @@ public class Auto {
 	
 	}
 }
+
+
+
+public class CoreJava {
+
+	// Non Static Method without return and zero argument
+	public void Add() {
+		int a = 10;
+		int b = 20;
+		int c = a + b;
+		System.out.println(c);
+	}
+
+	// Non Static Method without return and  argument
+	public int sub(int a, int b) {
+		int c = a - b;
+		System.out.println(c);
+		return c;
+	}
+
+	// Non Static Method with return and zero argument
+	public int Multi() {
+		int a = 10;
+		int b = 20;
+		int c = a * b;
+		return c;
+	}
+
+	// Non Static Method with return and argument
+	public int div(int a, int b) {
+		int c = a / b;
+		return c;
+	}
+	
+	public String wheel() {
+		String x="Wheel";
+		return x;
+	}
+	
+	public static void main(String[] arg) {
+		CoreJava add = new CoreJava();
+		add.Add();
+		int y=add.sub(10, 20);
+		System.out.println(add.sub(10, 20));
+		System.out.println(add.Multi());
+		System.out.println(add.div(20, 10));
+		System.out.println(add.wheel());
+	}
+}
