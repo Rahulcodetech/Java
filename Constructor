@@ -1,0 +1,10 @@
+//Constructor, excute automatically and do not occupy space, no return value, initilization of object , only defalut , public, private , protected.
+	super() and this() must be first line and both not be simultaneously. 
+	super() & this() can be used only in the constructor.
+	super() call constructor from another constructor
+	this() & super() are constructor call
+	this and super are the
+	constructor overloading is applicable
+	Overriding not applicable to constructor
+	in interface the constructor is not applicable as interface are final and constructor is not applicable
+	abstract class constrctor is applicable
