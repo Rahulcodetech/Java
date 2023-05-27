@@ -65,4 +65,25 @@
 		
 		
 		
+public class employee {
+
+	 String name;
+	 int id;
+	public employee (String name, int id) {
+		this.name=name;
+		this.id=id;
+	}
+	
+	public static void main(String[] args) {
+		
+		employee emp1=new employee ("Rahul", 101);
+		employee emp2=new employee ("Pawar", 102);
+		
+		System.out.println(emp1.name +" "+ emp1.id);
+		System.out.println(emp2.name +" "+ emp2.id);
+	}
+
+}
+		
+		
 		
