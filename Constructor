@@ -8,3 +8,61 @@
 	Overriding not applicable to constructor
 	in interface the constructor is not applicable as interface are final and constructor is not applicable
 	abstract class constrctor is applicable
+	
+	//Constructor
+	class test()
+	{
+	System.out.println();
+	}
+	
+	class test(double d)
+	{
+	this.d
+	System.out.println();
+	}
+	
+	class test(int a)
+	{
+	this.d
+	System.out.println()
+	}
+
+	class
+        Object oriented programing structure or System --> Real world methodology or paradigm
+        1. Object oriented paradim
+        2. Procedural oriented paradim
+        3. Subject oriented paradim
+        4. logical oriented paradim
+
+        Class
+        Method
+        Constructor
+        Object
+        Inheritance
+        Abstraction
+        Polymorphism
+        Encapsulation
+
+        class is collection of object
+        class is not real world entity (it is just template or blue print)
+        class does not occupy memory
+        class contains --> method , constructor fields objects nested class
+	
+	Constructor
+	class name is constructor name 
+        constructor does not occupy memory
+        constructor initialize the object
+        constructor use only public,private, protected, and default class
+        constructor use sure() and this() in first line only
+        constructor use sure() to call the another constructor
+        constructor can not use sure() and this() at same time
+        Constructor overriding is not allowed
+        constructor overloading is possible
+        Type of constructor
+                Deafult constructor
+                Parameterized constructor
+                No argument constructor /Copy constructor
+		
+		
+		
+		
