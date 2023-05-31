@@ -1,33 +1,29 @@
-   ArrayList<String> names=new ArrayList<String>();
-		names.add("Abhay");
-		names.add("Avinah");
-		names.add("Adas");
-		names.add("Rahul");
-		names.add("Vishal");
+		ArrayList<String> ar=new ArrayList<String>();
+		ar.add("Java");
+		ar.add("java");
+		ar.add("rahul");
+		ar.add("Avi");
 		
-		Long c=names.stream().filter(s->s.startsWith("A")).count();
-		System.out.println(c);
+		ArrayList<Integer> num=new ArrayList<Integer>();
+		num.add(10);
+		num.add(20);
+		num.add(30);
+		num.add(10);
+		num.add(40);
 		
-		long d=Stream.of("Abhay","Avinah","Adas","Rahul","Vishal").filter(s->
-		{
-		s.startsWith("A");
-		return true;
-		}).count();
+		ar.stream().filter(s->s.endsWith("l")).forEach(s->System.out.println(s));
+		ar.stream().filter(s->s.startsWith("J")).forEach(S->System.out.println(S));
+		ar.stream().filter(s->s.length()>5).forEach(s->System.out.println(s));
+		ar.stream().map(s->s.toUpperCase()).forEach(S->System.out.println(S));
+		ar.stream().map(s->s.toLowerCase()).forEach(S->System.out.println(S));
+		num.stream().distinct().forEach(s->System.out.println(s));
+		ar.stream().sorted().forEach(l->System.out.println(l));
+		long a= ar.stream().filter(s->s.startsWith("A")).count();
+		System.out.println(a);
 		
-		System.out.println(d);
+		num.stream().collect(Collectors.toList());
+		System.out.println(num.get(2));
 		
-		names.stream().filter(s->s.length()>5).forEach(s->System.out.println(s));
-		names.stream().filter(s->s.length()>5).limit(1).forEach(s->System.out.println(s));
-		
-		names.stream().filter(s->s.endsWith("l")).map(s->s.toUpperCase()).forEach(s->System.out.println(s));
-		
-		List<String> name=Arrays.asList("Abhay","Avinah","Adas","Rahul","Vishal");
-		name.stream().filter(s->s.startsWith("A")).sorted().map(s->s.toUpperCase()).forEach(s->System.out.println(s));
-		
-		List<Integer> values=Arrays.asList(1,2,3,4,5,6);
-		values.stream().distinct().forEach(s->System.out.print(s));
-		values.stream().distinct().sorted().collect(Collectors.toList());
-		System.out.println(values.get(0));
 		
 		
 		
