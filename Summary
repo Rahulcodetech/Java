@@ -5,6 +5,12 @@
 //String is object contains the character and special character , digit. 
 //String is immutable, non synchronous , thread safe , high memory and slow to response 
 //Wrap Class
+//if (condition) {
+  // block of code to be executed if the condition is true
+}
+//if (condition) {
+  // block of code to be executed if the condition is true
+} else { // block of code to be executed if the condition is true }
 		
 //List Interface
 //class ->Static Array -> //ArrayList dynamic/List 
