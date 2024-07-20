@@ -20,7 +20,7 @@ String
 		String s1=new String("Deepak"); //With new key word Two memory address created in String Literal Pool 
 		String s2="Rahul";		//One heap Memory address created
 
-		String 
+		String https://www.youtube.com/watch?v=_m04SPTU4N0
 		String is object contains charter special , charter and numbers. String is immutable , String is slow and consume the memory 		
 		String 						Buffer				Builder
 		immutable 					mutable				mutable	
